@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./app:/go/src/app
+    ports:
+      - 5000:5000
+    tty: true
