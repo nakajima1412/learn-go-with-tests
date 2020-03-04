@@ -5,7 +5,8 @@ WORKDIR /go/src/app
 ENV GO111MODULE=on
 
 RUN apt-get update -qq && \
-    apt-get install -y git
+    apt-get install -y git \
+    go mod download
 
 EXPOSE 5000
 CMD [ "/bin/bash" ]
